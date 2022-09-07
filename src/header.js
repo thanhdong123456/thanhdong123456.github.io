@@ -8,8 +8,8 @@ function Header() {
             <Link to='/' className="App-logo"><img src={logo}  alt="logo" /></Link>
             <div className='nav'>
                 <Link to='/cart' className='cart'><img src={cart} /></Link>
-                <button className="sign-up">Sign Up</button>
-                <button className="sign-in">Sign In</button>
+                <button className="sign-up">Đăng ký</button>
+                <button className="sign-in">Đăng nhập</button>
             </div>
       </header>
     )

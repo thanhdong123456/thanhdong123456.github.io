@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import "./ProductList.css"
 import img from "./img/img1.png"
 import { Link } from "react-router-dom";
+import {useCart} from 'react-use-cart';
 
 
 
@@ -21,8 +22,8 @@ function ProductList() {
         .then(response => response.json())
         .then(json => setCategory(json.data))
     }, []);
-    
-    
+
+
 
     const filterProducts = async (event) => {
         await fetch("https://api.storerestapi.com/categories" + event.target.value)
@@ -30,13 +31,13 @@ function ProductList() {
           .then((data) => setProducts(data));
       };
     
-    
+    const { addItem } = useCart();
     return (
         <div className="product-list">
             <div className="filter-section">
-                <h4 className="filter-title">SEARCH FILTER</h4>
+                <h4 className="filter-title">BỘ LỌC TÌM KIẾM</h4>
                 <div className="category">
-                    <p>category</p>
+                    <p>Theo danh mục</p>
                     <select onChange={filterProducts}>
                         {category.map(cate => (
                                 <option key={cate.name} value={cate.name}>{cate.name}</option>
@@ -53,7 +54,7 @@ function ProductList() {
                         <nav>
                             <Link to={`/product/${product.slug}`}>Xem chi tiết</Link>
                         </nav>
-                        <button className="product-buy">thêm vào giỏ hàng</button>
+                        <button onClick={() => addItem(product)} className="product-buy">thêm vào giỏ hàng</button>
                     </div>
                 ))}
             </div>

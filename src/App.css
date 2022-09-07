@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-color: #fafafa;
+  min-height: 100vh;
+  background-color: #bebdbd;
 
 }
 
@@ -34,25 +35,25 @@
 }
 
 .cart {
-  width: 10%;
+  width: 5%;
   margin-right: 10px;
   cursor: pointer;
 }
 .cart img {
-  width: 30%;
+  width: 70%;
 }
 
 .sign-up {
   width: 7%;
   margin-right: 10px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .sign-in {
-  width: 7%;
+  width: 8%;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 @keyframes App-logo-spin {

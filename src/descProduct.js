@@ -2,11 +2,13 @@ import img from "./img/img1.png"
 import './descProduct.css'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import {  useCart } from "react-use-cart";
 
 function DescProduct() {
     const { slug } = useParams();
     const [product, setProduct] = useState([])
     const [count, setCount] = useState(0)
+    const { addItem } = useCart();
     useEffect(() => {
         fetch(`https://api.storerestapi.com/products/${slug}`)
         .then(response => response.json())
@@ -35,7 +37,7 @@ function DescProduct() {
             <div>{count}</div>
             <button onClick={handlePlus} type="button">+</button>
         </div>
-        <button>Đặt hàng</button>
+        <button className="product-buy" onClick={() => addItem(product)}>Thêm vào giỏ hàng</button>
         </div>
     )
 };
