@@ -1,0 +1,12 @@
+.button-group {
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.button-group button {
+  margin: 0px 10px;
+  font-size: 20px;
+}
