@@ -34,10 +34,10 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
 }
 
-.product-item:hover {
+/* .product-item:hover {
     box-sizing: border-box;
-    border: #ee4d2d 1px solid;
-}
+    border: #ee4d2d 5px solid;
+} */
 
 .product-img {
     width: 100%;
@@ -50,10 +50,22 @@
 }
 
 .product-price {
-    color: red;
+    color: #ee4d2d;
     text-align: end;
     font-size: 20px;
     margin: 5px 20px;
+}
+
+.product-detail {
+    padding: 0 5px;
+    text-decoration: none;
+    color: #ee4d2d;
+    border: #ee4d2d 1px solid;
+}
+
+.product-detail:hover {
+    background-color: #ee4d2d;
+    color: white;
 }
 
 .product-buy {
@@ -64,5 +76,9 @@
     margin-bottom: 10px;
     padding: 10px 10px;
     background-color: #ee4d2d;
+}
+
+.product-buy:hover {
+    background-color: #921f08;
 }
 

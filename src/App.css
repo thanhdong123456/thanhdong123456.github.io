@@ -35,12 +35,25 @@
 }
 
 .cart {
-  width: 5%;
+  width: 10%;
   margin-right: 10px;
   cursor: pointer;
+  display: flex;
+  text-decoration: none;
 }
+
 .cart img {
-  width: 70%;
+  width: 40%;
+}
+
+.cart button {
+  width: 25px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50px;
+  background-color: #ee4d2d;
+  color: white;
+  border: none;
 }
 
 .sign-up {
