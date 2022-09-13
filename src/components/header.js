@@ -3,7 +3,7 @@ import logo from '../logo.svg';
 import { Link } from "react-router-dom";
 
 function Header(props) {
-    const {countCartItems, issucces} = props
+    const {countCartItems, issucces, handleLogout } = props
     
     let styleLogin = {}
     let styleLogout = {}
@@ -30,7 +30,7 @@ function Header(props) {
                     <button>Đăng nhập</button>
                 </Link>
                 <p className="sign-up" style={styleLogout}>xin chào</p>
-                <Link to="/login" className="sign-in" style={styleLogout}>
+                <Link onClick={handleLogout}  to="/login" className="sign-in" style={styleLogout}>
                     <button>Đăng xuất</button>
                 </Link>
             </div>

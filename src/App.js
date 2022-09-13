@@ -49,9 +49,14 @@ function App() {
   //   return <Navigate to="/login"></Navigate>
   // }
 
+  const handleLogout = () => {
+    localStorage.removeItem("token")
+    console.log('sonbk');
+    setIssucces('')
+  }
   return (
     <div className="App">
-        <Header countCartItems={cartItems.length} issucces={issucces} setIssucces={setIssucces}  />
+        <Header handleLogout={handleLogout} countCartItems={cartItems.length} issucces={issucces} setIssucces={setIssucces}  />
         <Routes>
           <Route path="/" element={<ProductList onAdd={onAdd} />} />
           <Route exact path='/product/:slug' element={<DescProduct onAdd={onAdd} cartItems={cartItems} />} />

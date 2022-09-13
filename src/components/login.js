@@ -18,10 +18,14 @@ function Login({setIssucces}) {
         })
         .then((response) => {
             setIssucces(response.config.data);
-            console.log(typeof setIssucces);
+            console.log(response);
             alert('đăng nhập thành công')
             // setIssucces('1')
+            if(response.data.data.access_token) {
+                localStorage.setItem("token", JSON.stringify(response.data.data))
+            }
             setNavigate(true)
+            // return response.data.data
         })
         .catch((err) => {
             console.log(err)
@@ -30,11 +34,10 @@ function Login({setIssucces}) {
             setNavigate(false)
         })
     }
+
     if(navigate) {
         return <Navigate to='/'></Navigate>
     }
-
-    console.log(email);
     return (
         <div>
             <h1>Đăng nhập</h1>
