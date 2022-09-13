@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import "./ProductList.css"
+import "../ProductList.css"
 import img from "../img/img1.png"
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 
@@ -31,7 +32,11 @@ function ProductList(props) {
         fetch("https://api.storerestapi.com/categories/" + event.target.value)
           .then((res) => res.json())
           .then((json) => setProducts(json.data.products));
-        };
+    };
+
+
+
+    
     return (
         <div className="product-list">
             <div className="filter-section">

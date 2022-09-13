@@ -1,10 +1,10 @@
 import img from "../img/img1.png"
-import './descProduct.css'
+import '../descProduct.css'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 function DescProduct(props) {
-    const { cartItems, onAdd, onRemove} = props;
+    const {onAdd} = props;
     const { slug } = useParams();
     const [product, setProduct] = useState([])
     useEffect(() => {

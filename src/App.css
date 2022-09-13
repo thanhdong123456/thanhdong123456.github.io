@@ -57,16 +57,38 @@
 }
 
 .sign-up {
-  width: 7%;
-  margin-right: 10px;
+  width: 8%;
+  margin-top: -7px;
+}
+
+.sign-up button {
+  padding: 5px;
   border-radius: 5px;
   font-size: 17px;
+  cursor: pointer;
 }
 
 .sign-in {
   width: 8%;
+  margin-top: -7px;
+}
+
+.sign-in button {
+  padding: 5px;
   border-radius: 5px;
   font-size: 17px;
+  cursor: pointer;
+}
+
+
+.form {
+  width: 20%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(231, 231, 231);
+  margin: auto;
+  text-align: start;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
 }
 
 @keyframes App-logo-spin {
