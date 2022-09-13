@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import ProductList from './components/ProductList';
 import DescProduct from "./components/descProduct";
 import Header from './components/header';
@@ -33,19 +33,25 @@ function App() {
     }
   }
 
+  // const [nav, setNav] = useState(false)
   const [issucces, setIssucces] = useState('')
   const removeCart = () => {
     if(issucces === ''){
       alert('đặt hàng thất bại. Bạn phải đăng nhập trước khi đặt hàng')
+      // setNav(true)
     }else {
       setCartItems([]);
       alert('đặt hàng thành công')
+      // setNav(false)
     }
   }
+  // if(nav) {
+  //   return <Navigate to="/login"></Navigate>
+  // }
 
   return (
     <div className="App">
-        <Header countCartItems={cartItems.length} issucces={issucces}  />
+        <Header countCartItems={cartItems.length} issucces={issucces} setIssucces={setIssucces}  />
         <Routes>
           <Route path="/" element={<ProductList onAdd={onAdd} />} />
           <Route exact path='/product/:slug' element={<DescProduct onAdd={onAdd} cartItems={cartItems} />} />

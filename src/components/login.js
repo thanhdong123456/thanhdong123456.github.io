@@ -17,9 +17,10 @@ function Login({setIssucces}) {
             email: email, password: password
         })
         .then((response) => {
-            console.log(response.config.data);
+            setIssucces(response.config.data);
+            console.log(typeof setIssucces);
             alert('đăng nhập thành công')
-            setIssucces('1')
+            // setIssucces('1')
             setNavigate(true)
         })
         .catch((err) => {
@@ -33,17 +34,28 @@ function Login({setIssucces}) {
         return <Navigate to='/'></Navigate>
     }
 
+    console.log(email);
     return (
         <div>
             <h1>Đăng nhập</h1>
             <form className="form" onSubmit={submitHandle}>
                 <label>Email: </label>
                 <br></br>
-                <input type="text" placeholder="email" onChange={e => setEmail(e.target.value)}></input>
+                <input 
+                    type="text" 
+                    placeholder="email"
+                    onChange={e => setEmail(e.target.value)}
+                >
+                </input>
                 <br></br> <br></br>
                 <label>Mật khẩu: </label>
                 <br></br>
-                <input type="password" placeholder="password" onChange={e => setPassword(e.target.value)}></input>
+                <input 
+                    type="password" 
+                    placeholder="password" 
+                    onChange={e => setPassword(e.target.value)}
+                >
+                </input>
                 <br></br> <br></br>
                 <button>Đăng nhập</button>
             </form>
@@ -52,3 +64,6 @@ function Login({setIssucces}) {
 }
 
 export default Login;
+
+// email: 'marklyan@gmail.com',
+// password: 'simple_password'
