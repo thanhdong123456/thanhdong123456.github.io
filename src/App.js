@@ -51,11 +51,11 @@ function App() {
     <div className="App">
         <Header handleLogout={handleLogout} countCartItems={cartItems.length} issucces={issucces} setIssucces={setIssucces}  />
         <Routes>
-          <Route exact path="#/" element={<ProductList onAdd={onAdd} />} />
-          <Route path='#/product/:slug' element={<DescProduct onAdd={onAdd} cartItems={cartItems} />} />
-          <Route path='#/cart' element={<Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} removeCart={removeCart} />} />
-          <Route path='#/register' element={<Register />} />
-          <Route path='#/login' element={<Login setIssucces={setIssucces} />} />
+          <Route exact path="/" element={<ProductList onAdd={onAdd} />} />
+          <Route path='/product/:slug' element={<DescProduct onAdd={onAdd} cartItems={cartItems} />} />
+          <Route path='/cart' element={<Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} removeCart={removeCart} />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login setIssucces={setIssucces} />} />
         </Routes>
     </div>
   );
