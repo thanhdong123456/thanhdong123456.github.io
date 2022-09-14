@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import "../ProductList.css"
 import img from "../img/img1.png"
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 
 
