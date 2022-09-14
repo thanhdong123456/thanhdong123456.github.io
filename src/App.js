@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import ProductList from './components/ProductList';
 import DescProduct from "./components/descProduct";
 import Header from './components/header';
@@ -50,13 +50,13 @@ function App() {
   return (
     <div className="App">
         <Header handleLogout={handleLogout} countCartItems={cartItems.length} issucces={issucces} setIssucces={setIssucces}  />
-        <Routes>
-          <Route path="/" element={<ProductList onAdd={onAdd} />} />
+        <HashRouter>
+          <Route exact path="/" element={<ProductList onAdd={onAdd} />} />
           <Route path='/product/:slug' element={<DescProduct onAdd={onAdd} cartItems={cartItems} />} />
           <Route path='/cart' element={<Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} removeCart={removeCart} />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login setIssucces={setIssucces} />} />
-        </Routes>
+        </HashRouter>
     </div>
   );
 }
