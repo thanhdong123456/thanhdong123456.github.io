@@ -33,21 +33,15 @@ function App() {
     }
   }
 
-  // const [nav, setNav] = useState(false)
   const [issucces, setIssucces] = useState('')
   const removeCart = () => {
     if(issucces === ''){
       alert('đặt hàng thất bại. Bạn phải đăng nhập trước khi đặt hàng')
-      // setNav(true)
     }else {
       setCartItems([]);
       alert('đặt hàng thành công')
-      // setNav(false)
     }
   }
-  // if(nav) {
-  //   return <Navigate to="/login"></Navigate>
-  // }
 
   const handleLogout = () => {
     localStorage.removeItem("token")

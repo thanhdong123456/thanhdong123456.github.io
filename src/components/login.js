@@ -47,6 +47,7 @@ function Login({setIssucces}) {
                 <input 
                     type="text" 
                     placeholder="email"
+                    id="email"
                     onChange={e => setEmail(e.target.value)}
                 >
                 </input>
@@ -56,6 +57,7 @@ function Login({setIssucces}) {
                 <input 
                     type="password" 
                     placeholder="password" 
+                    id="password"
                     onChange={e => setPassword(e.target.value)}
                 >
                 </input>
